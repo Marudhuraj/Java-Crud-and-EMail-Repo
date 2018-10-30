@@ -1,0 +1,13 @@
+018-08-24 19:16:16.448  INFO 9352 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+Hibernate: drop table if exists customer
+Hibernate: drop table if exists shipwreck_details
+Hibernate: create table customer (id bigint not null auto_increment, name varchar(255), phone varchar(255), primary key (id))
+Hibernate: create table shipwreck_details (id bigint not null auto_increment, condition varchar(255), depth integer, description varchar(255), latitude decimal(19,2), longitude decimal(19,2), name varchar(255), year_discovered integer, primary key (id))
+2018-08-24 19:16:17.287 ERROR 9352 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: create table shipwreck_details (id bigint not null auto_increment, condition varchar(255), depth integer, description varchar(255), latitude decimal(19,2), longitude decimal(19,2), name varchar(255), year_discovered integer, primary key (id))
+2018-08-24 19:16:17.287 ERROR 9352 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'condition varchar(255), depth integer, description varchar(255), latitude decima' at line 1
+2018-08-24 19:16:17.291  INFO 9352 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-08-24 19:16:17.968  INFO 9352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@f381794: startup date [Fri Aug 24 19:16:10 IST 2018]; root of context hierarchy
+2018-08-24 19:16:18.096  INFO 9352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/findall]}" onto public java.util.List<com.boot.model.Customer> com.boot.controller.CustomerController.findAll()
+2018-08-24 19:16:18.108  INFO 9352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String com.boot.controller.HomeController.home()
+2018-08-24 19:16:18.108  INFO 9352 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/shipwrecks/{id}],methods=[GET]}" onto public com.boot.model.Shipwreck com.boot.controller.ShipwreckController.get(java.lang.Long)
+2018-08-24 19:16:18.108  INFO 93
