@@ -17,10 +17,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 	
-	private String FROM_MAIL_ID = "marudhu.pandiyan@gmail.com";
-	private String SMTP_SERVER_HOST = "smtp.gmail.com";
+	private String FROM_MAIL_ID = "test@gmail.com"; // Add original data
+	private String SMTP_SERVER_HOST = "test_host"; // Add original data
+	private String FROM_MAIL_PWD = "test@123"; // Add original data
 	private Integer SMTP_SERVER_PORT = 587;
-	private String FROM_MAIL_PWD = "_marudhu_ui";
 	private Boolean MAIL_SMTP_STARTTLS_ENABLE = true;
 	private String Mail_content = "Erste registration is done succesfully . Please set your password using this link HERE";
 	public boolean sendEmail(String ToEmailId) {
